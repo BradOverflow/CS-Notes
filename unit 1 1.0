@@ -1,0 +1,178 @@
+# Unit I: Primitive Types & Strings
+### _Introduction_
+This unit delves into the fundamental data types and operations essential for programming in Java. It covers the basics of variables, data types, casting, and operators, crucial for crafting programs. Additionally, it encompasses strings, a non-primitive data type for storing sequences of characters.
+
+### Variables
+- **Purpose**: Containers for storing data values.
+- **Requirement in Java**: Each variable must be declared with a specific data type.
+- **Function**: The data type of a variable determines the kind of data it can hold.
+- **Examples**: Various types of variable declarations showcasing their data types:
+
+> Think of variables like empty boxes waiting for data. When declared, they're ready to be filled with specified data. The variable name acts like a label on the box, indicating what's inside, akin to having boxes labeled "Toys" or "Books." In Java, a variable's name reveals the type of information it contains.
+
+```java
+int age = 25;           // 'int' for integer data, 'age' is the variable name.
+double height = 5.9;    // 'double' for decimal numbers, 'height' is the variable name.
+char grade = 'A';       // 'char' for single characters, 'grade' is the variable name.
+boolean isPass = true;  // 'boolean' for true/false values, 'isPass' is the variable name.` 
+```
+### Primitive Data Types
+
+Primitive data types are Java's most basic data types and serve as the building blocks for data manipulation. Here, we explore these types through the previously discussed variables.
+
+#### Integer (`int`)
+
+-   **Use**: For representing whole numbers without a decimal.
+-   **Manipulation**: Can be used with arithmetic operators.
+-   **Example**:
+```java
+ int age = 25;
+    int speed = 60;` 
+```
+> `int` is designed to store whole numbers. When dividing integers, Java truncates the result. For example, dividing 7 by 2 gives 3, not 3.5, as it discards the decimal part.
+
+#### Floating-point (`float` and `double`)
+
+-   **Use**: For numbers requiring a decimal point.
+-   **Precision**: `float` has 6-7 decimal digits of precision, while `double` has 15-16.
+-   **Example**:
+```java
+   float piApprox = 3.14f;
+   double piPrecise = 3.1415926535;` 
+```
+
+> `float` and `double` are used for storing decimal numbers. They offer different levels of precision, making them suitable for various applications.
+
+#### Character (`char`)
+
+-   **Use**: For storing individual characters.
+-   **Example**:
+    
+```java
+    char grade = 'A';
+    char symbol = '#';` 
+```
+
+> `char` stores a single character based on the ASCII standard. Characters in Java can be manipulated using their ASCII values, such as incrementing 'a' to 'b'.
+
+#### Boolean (`boolean`)
+
+-   **Use**: For storing true or false values.
+-   **Example**:
+    
+```java
+    boolean isPass = true;
+    boolean isFail = false;` 
+ ```
+
+> `boolean` represents true or false values, essential for control structures and logical operations in Java.
+
+### Operators
+
+#### Arithmetic Operators
+
+-   **Use**: For basic mathematical operations like addition, subtraction, multiplication, division, and modulus.
+-   **Operators**: `+`, `-`, `*`, `/`, `%`.
+-   **Example**: Changing integer values.
+    
+```java
+   int number = 10;
+    number += 5;  // Increments by 5, becomes 15
+    number -= 3;  // Decrements by 3, becomes 12
+    number *= 2;  // Doubles, becomes 24
+    number /= 4;  // Divides by 4, becomes 6
+    int remainder = number % 5;  // Modulus operation, remainder is 1` 
+```
+
+> The modulus operator (`%`) is particularly interesting as it returns the remainder of division, useful for various arithmetic computations.
+
+#### Relational Operators
+
+-   **Use**: For comparing two values.
+-   **Operators**: `==`, `!=`, `<`, `>`, `<=`, `>=`.
+-   **Example**:
+    
+```java
+    int a = 5; 
+    int b = 1; 
+    boolean test = a < b; 
+    System.out.println(test); // Outputs false` 
+```
+
+> Relational operators evaluate to Boolean values, making them pivotal in control flow and decision-making structures.
+
+#### Logical Operators
+
+-   **Use**: For logical operations.
+-   **Operators**: `&&` (and), `||` (or), `!` (not).
+-   **Example**:
+    
+```java
+   int x = 4;
+    boolean and = x < 5 && x < 10; // 'and' is true
+    boolean or = x < 5 || x < 4; // 'or' is false
+    boolean not = !(x < 5 && x < 10); // 'not' is true` 
+```
+
+> Logical operators are combined with relational operators for more complex conditions.
+
+### Type Conversion in Java
+
+Type conversion in Java is the process of changing an entity of one datatype into another. This can happen automatically or can be done manually by the programmer.
+
+#### Implicit Conversion (Automatic Type Conversion)
+
+-   **Occurs when**: The Java compiler automatically converts a smaller data type into a larger data type.
+-   **Example**:
+    
+```java
+    int myInt = 100;
+    double myDouble = myInt;  // Automatic conversion from int to double` 
+```
+-   **Common Scenarios**:
+    -   Converting `int` to `long`, `float`, or `double`.
+    -   Converting `char` to `int`, `long`, `float`, or `double`.
+
+> Implicit conversion is like a small cup of coffee being poured into a bigger mug. The small cup (smaller data type) easily fits into the bigger mug (larger data type) without any issues.
+
+#### Explicit Conversion (Casting)
+
+-   **Occurs when**: The programmer manually converts one data type to another. This is necessary when you need to convert a larger data type into a smaller one.
+-   **Syntax**: `(targetDataType) valueToBeConverted`
+-   **Example**:
+    
+```java
+    double myDouble = 9.78;
+    int myInt = (int) myDouble; // Manually converting a double to an int` 
+```
+-   **Common Scenarios**:
+    -   Converting `double` to `int`, `float` to `int`, `long` to `int`.
+    -   Anytime a larger data type needs to fit into a smaller one.
+
+> Explicit conversion is like fitting a large pizza into a small box. You need to manually cut the pizza (larger data type) to make it fit into the smaller box (smaller data type). This process can lead to loss of information (like the decimal part in numbers).
+
+### String
+
+-   **Type**: Non-primitive data type.
+-   **Use**: For storing sequences of characters.
+-   **Examples**:
+    
+```java
+    String name = "Java"; // Declares a String variable 'name' and initializes it to "Java".
+    String greeting = "Hello, " + name + "!"; // Concatenates strings to form a greeting.
+    System.out.println(greeting); // Outputs "Hello, Java!".` 
+```
+
+### _Vocabulary Terms_
+
+1.  **Variable**: A named storage location in memory that can hold a value. Variables in Java must be declared with a specific data type and can be modified during program execution.
+2.  **Data Type**: Specifies the size and type of values that can be stored in a variable. Java has several data types, broadly classified into primitive (such as `int`, `double`, `char`, `boolean`) and non-primitive (like `String`, arrays, classes).
+3.  **Primitive Data Type**: The basic data types provided by Java, including `int` (integer numbers), `double` and `float` (floating-point numbers), `char` (single characters), and `boolean` (true/false values).
+4.  **Arithmetic Operators**: Used for performing basic mathematical calculations like addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`), and modulus (`%`).
+5.  **Relational Operators**: Used to compare two values or expressions. These include equal to (`==`), not equal to (`!=`), greater than (`>`), less than (`<`), greater than or equal to (`>=`), and less than or equal to (`<=`).
+6.  **Logical Operators**: Operators that are used to form complex Boolean expressions. These include AND (`&&`), OR (`||`), and NOT (`!`).
+7.  **String**: A non-primitive data type in Java used for storing sequences of characters. Strings are objects and provide various methods for string manipulation.
+8.  **Modulus Operator**: An arithmetic operator that returns the remainder of the division of two numbers (`%`).
+9.  **Boolean Algebra**: A branch of algebra centered around the values true and false (Boolean values). It involves the use of logical operators.
+10.  **ASCII Code**: A character encoding standard for electronic communication. In Java, characters (`char`) are stored as their corresponding ASCII values.
+11.  **Type Conversion**: The process of converting a value from one data type to another, like from `int` to `double`. This can be implicit (automatic) or explicit (using casting).
